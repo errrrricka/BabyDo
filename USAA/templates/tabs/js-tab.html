@@ -1,0 +1,17 @@
+<span class="data-area" ng-repeat="link in $ctrl.data">
+    <div class="content">
+    <div class="step">Step {{$index + 1}}</div>
+    <h2 class="title">{{link.title}}</h2>
+    <span class="short-desc">{{link.desc}}</span>
+        <ul class="links">
+            <li ng-repeat="link in link.code.links" class="">
+                <div class="title"></div>
+                <a href="{{link.url}}" class="link-name">{{link.name}}</a>
+                <span class="link-desc">{{link.desc}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="code">
+        <pre class="line-numbers" data-src="{{link.code.src}}" data-line="{{link.code.lines}}"></pre>
+    </div>
+</span>

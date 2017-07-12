@@ -1,0 +1,614 @@
+ html,body {
+    overflow-x: hidden;
+    font-family: Arial;
+    height: 100%;
+ }
+
+
+/* Toggle Styles */
+
+.primary-color {
+    background: #1e91c0;
+    color: #1e91c0;
+}
+.secondary-color {
+    background: #086a94;
+    color: #086a94;
+}
+
+pre.line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+    position: relative;
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em; /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid #999;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.line-numbers-rows > span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+    content: counter(linenumber);
+    color: #999;
+    display: block;
+    padding-right: 0.8em;
+    text-align: right;
+}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.login-page {
+    background-image: url(../images/Login.jpg);
+    background-size: cover;
+    background-color: #033b63;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+.not-found {
+    background-image: url(../images/background404.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.login-page .help-block,
+.not-found .help-block {
+    text-align: left;
+}
+
+.login-page button,
+.not-found button {
+    width: 100%;
+    background: #1e91c0;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 0;
+    border: none;
+    border-radius: 3px;
+}
+
+.not-found button {
+    background: none;
+    border: solid 2px #1e91c0;
+    color: #1e91c0;
+}
+
+.login-page h2,
+.not-found h2 {
+    font-family: Arial;
+    font-size: 24px;
+    color: #535B64;
+    margin-bottom: 25px;
+}
+.not-found .message {
+    color: #4B4948;
+    text-align: left;
+}
+.login-page .content,
+.not-found .content {
+    max-width: 560px;
+    box-sizing: border-box;
+    margin: 70px auto 0 auto;
+    display: inline-block;
+    width: 100%;
+    float: none;
+}
+.login-page .light-box,
+.not-found .light-box {
+    background: #fff;
+    padding: 0 100px;
+    border-radius: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.login-page .btn-group,
+.not-found .btn-group {
+    padding: 25px 15px 100px 15px;
+}
+
+.login-page .content.disclaimer,
+.not-found .content.disclaimer {
+    margin: 20px 0 0 0;
+    font-size: 12px;
+    color: #fff;
+}
+
+.top-logo {
+    background-image: url(../images/usaa-logo-blue.png);
+    background-size: 100% auto;
+    height: 100px;
+    width: 95px;
+    background-repeat: no-repeat;
+    margin: 65px auto 40px auto;
+}
+
+canvas {
+    float: left;
+}
+
+.code {
+    margin: 0;
+    width: 60%;
+    float: right;
+}
+
+.container-fluid {
+    color: #535B64;
+}
+
+#wrapper.toggled {
+    padding-left: 222px;
+}
+
+.toolbar {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    padding: 2px 10px 0 10px;
+    font-size: 14px;
+    border-bottom-left-radius: 5px;
+    background: rgb(8, 106, 148);
+}
+
+.toolbar a {
+    color: #fff;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 222px;
+    width: 0;
+    height: 100%;
+    margin-left: -222px;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 222px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -222px;
+}
+
+/* Top Menu */
+
+.search-box input,
+.search-box .input-group-addon {
+    border: none;
+    height: 59px;
+    background: none;
+    box-shadow: none;
+    padding: 20px 10px 20px 20px;
+}
+
+.dataTables_wrapper {
+    padding: 15px;
+}
+
+.search-box input {
+    padding: 0;
+}
+
+.btn-group {
+    width: 100%;
+    padding: 25px 15px;
+}
+
+.tutorial-title {
+    padding: 0 15px 25px 15px;
+    border-bottom: #d4d4d2 solid 1px;
+}
+
+.tutorial-title h2 {
+    font-weight: normal;
+    font-size: 24px;
+    background: transparent;
+    line-height: 24px;
+    margin: 30px 0 10px 0;
+}
+
+@media (min-width: 992px) {
+  .col-md-6 {
+      width: 50%;
+  }
+}
+
+.col-lg-12 {
+    padding: 0;
+}
+
+.glyphicon-search {
+    color: #474747;
+    font-size: 16px;
+}
+
+.data-area {
+    padding: 50px 15px 50px 15px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+.short-desc {
+    padding: 10px 0 20px 0;
+    display: block;
+    font-size: 13px;
+}
+.data-area .title {
+    margin: 5px 0 0 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-box {
+    max-width: 300px;
+    float: left;
+}
+
+.links {
+    float: right;
+}
+
+.content {
+    width: 40%;
+    float: left;
+    padding: 0 20px 0 0;
+}
+
+.content .links {
+    float: none;
+    padding: 0;
+    margin: 0;
+}
+
+.content .links li {
+    list-style: none;
+    margin: 0 0 5px 0;
+    font-size: 12px;
+}
+
+.step {
+    font-weight: bold;
+    color: rgb(8, 106, 148);
+}
+
+.content .links li .link-name {
+    margin: 0;
+    line-height: normal;
+    text-decoration: none;
+    height: auto;
+    display: inline-block;
+    font-weight: bold;
+    color: #333;
+    background: #ccc;
+    padding: 2px 6px 2px 5px;
+    font-size: 13px;
+    border-radius: 5px;
+    font-family: consolas;
+    cursor: pointer;
+}
+
+.line-highlight {
+    transition: opacity 0.5s;
+}
+
+.content .links li .link-name:hover {
+    background: rgb(8, 106, 148);
+    color: #fff;
+}
+
+.content .links li .link-desc {
+    display: block;
+    padding: 5px 5px;
+    font-size: 13px;
+}
+
+.links a.active {
+    color: #1e91c0;
+    text-decoration: underline;
+}
+
+.links a {
+    margin: 0 42px 0 0;
+    line-height: 60px;
+    color: #535B64;
+}
+
+.btn-group>.btn {
+    font-size: 13px;
+}
+
+.top-menu {
+    height: auto;
+    border-bottom: #d4d4d2 solid 1px;
+    background: #fafafa;
+    display: inline-block;
+    width: 100%;
+}
+
+#wrapper.closeMenu {
+    padding-left: 0;
+}
+
+.closeMenu #sidebar-wrapper {
+    width: 0;
+}
+
+.menu {
+    display: inline-block;
+    font-size: 25px;
+    padding: 15px 15px 7px 15px;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+.btn-group>.btn:hover,
+.btn-default:focus,
+.btn-default.active,
+.btn-default.active:focus,
+.btn-default.active:hover {
+    background: rgb(8, 106, 148);
+    color: #fff;
+}
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 222px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sidebar-nav .logo {
+    margin: 50px 0 0 0;
+    display: inline-block;
+}
+
+.sidebar-nav .logo img {
+    width: 80px;
+}
+
+.sidebar-nav .greeting {
+    font-size: 14px;
+    color: #fff;
+    line-height: normal;
+    margin: 20px 0 45px 0;
+}
+
+.sidebar-nav li {
+    padding: 0 0 0 50px;
+    line-height: 40px;
+    position: relative;
+    color: rgba(255,255,255,0.8);
+}
+
+.sidebar-nav li a {
+    display: block;
+    text-decoration: none;
+    font-weight: bold;
+    color: inherit;
+}
+
+.form-group {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.checkbox input[type="checkbox"],
+.checkbox input[type="radio"] {
+    margin: 0px 5px 0 0;
+    position: relative;
+    top: -1px;
+}
+
+.error {
+    background: #d23a3a;
+    padding: 10px;
+    color: #fff;
+    line-height: 14px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+}
+
+.sidebar-nav .link:hover,
+.sidebar-nav .link.active {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+}
+
+.instructions {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    top: -7px;
+}
+
+.sidebar-nav .icon {
+    position: absolute;
+    top: 13px;
+    left: 27px;
+    font-size: 13px;
+}
+
+.container {
+    padding: 0;
+}
+
+.demo-form label {
+    padding: 0;
+    width: 100%;
+    display: block;
+}
+
+.demo-form .control-input {
+    padding: 0;
+}
+
+.demo-form p {
+    display: inline-block;
+    width: 100%;
+}
+
+.sidebar-nav li a:active,
+.sidebar-nav li a:focus {
+    text-decoration: none;
+}
+
+.sidebar-nav > .sidebar-brand {
+    font-size: 18px;
+    line-height: normal;
+    text-indent: 0px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar-nav > .sidebar-brand {
+    font-size: 18px;
+    line-height: normal;
+    text-indent: 0px;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    padding: 0;
+}
+
+.sidebar-nav > .sidebar-brand a {
+    color: #999999;
+}
+
+.sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+}
+
+@media(min-width:768px) {
+    #wrapper {
+        padding-left: 222px;
+    }
+
+    #wrapper.toggled {
+        padding-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 222px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 0;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+/**
+ * The dnd-list should always have a min-height,
+ * otherwise you can't drop to it once it's empty
+ */
+ul[dnd-list] {
+    min-height: 42px;
+    padding-left: 0px;
+}
+
+/**
+ * The dndDraggingSource class will be applied to
+ * the source element of a drag operation. It makes
+ * sense to hide it to give the user the feeling
+ * that he's actually moving it.
+ */
+ul[dnd-list] .dndDraggingSource {
+    display: none;
+}
+
+/**
+ * An element with .dndPlaceholder class will be
+ * added to the dnd-list while the user is dragging
+ * over it.
+ */
+ul[dnd-list] .dndPlaceholder {
+    background-color: #ddd;
+    display: block;
+    min-height: 42px;
+}
+
+ul[dnd-list] li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-top-right-radius: 4px;
+    border-top-left-radius: 4px;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+}
+
+/**
+ * Show selected elements in green
+ */
+ul[dnd-list] li.selected {
+    background-color: #dff0d8;
+    color: #3c763d;
+}

@@ -1,0 +1,25 @@
+<div class="data-area">
+    <h2 class="title">{{title}}</h2>
+    <span class="short-desc">{{desc}}</span>
+    <div ng-controller="demo">
+        <div ng-if="loadData != undefined">
+            <table datatable="ng" class="row-border hover">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>FirstName</th>
+                    <th>LastName</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="person in people">
+                    <td>{{ person.id }}</td>
+                    <td>{{ person.firstName }}</td>
+                    <td>{{ person.lastName }}</td>
+                </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>

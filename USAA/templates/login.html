@@ -1,0 +1,27 @@
+<div class="login-page">
+    <div class="content">
+        <div class="light-box">
+            <div class="top-logo"></div>
+            <h2>{{$ctrl.title}}</h2>
+                <div class="content-area" ng-controller="$ctrl.form as form">
+                    <form class="demo-form">
+                        <div class="form-group" ng-repeat="field in form.data"  ng-switch="field.type" ng-class="{ 'has-error' : loginForm.input.$invalid }">
+                            <ng-form name="loginForm">
+                                <div ng-switch-when="text" class="field-name control-input">
+                                    <input id="{{field.id}}" placeholder="{{field.placeholder}}" type="{{field.type}}" class="form-control" ng-model="field.value" ng-required="{{field.required.value}}" ng-minlength="{{field.minlength.value}}" ng-maxlength="{{field.pattern.value}}" ng-pattern="{{field.pattern.value}}" name="input">
+                                </div>
+                                <p class="help-block" ng-show="loginForm.input.$error.required">{{field.required.message}}</p>
+                                <p class="help-block" ng-show="loginForm.input.$error.pattern">{{field.pattern.message}}</p>
+                                <p class="help-block" ng-show="loginForm.input.$error.maxlength">{{field.maxlength.message}}</p>
+                                <p class="help-block" ng-show="loginForm.input.$error.minlength">{{field.minlength.message}}</p>
+                            </ng-form>
+                        </div>
+                    </form>
+                </div>
+            <div class="btn-group">
+                <button ng-repeat="button in $ctrl.buttons" ng-link="['{{button.name}}']" type="button" class="btn btn-default btn-filter" data-target="{{button.text}}">{{button.text}}</button>
+            </div>
+        </div>
+        <span class="content disclaimer">© 2016 USAA Legal Information</span>
+    </div>
+</div>

@@ -1,0 +1,8 @@
+<div class="tutorial-title">
+    <h2 class="primary-color">{{$ctrl.title}}</h2>
+    <span>{{$ctrl.titleDescription}}</span>
+</div>
+<div class="btn-group tabs-group">
+    <button ng-repeat="tab in $ctrl.tabs" ng-link="['{{tab.name}}']" type="button" class="btn btn-default btn-filter" ng-class="{active : $ctrl.activeTab === tab.name}" data-target="{{tab.text}}">{{tab.text}}</button>
+</div>
+<ng-outlet></ng-outlet>

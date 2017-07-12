@@ -1,0 +1,180 @@
+[
+  {
+    "chart": {
+      "type": "area"
+    },
+    "credits": {
+      "enabled": false
+    },
+    "exporting" : {
+      "enabled": false
+    },
+    "colors" : ["#78bfdf","#086b94","#c2ecff"],
+    "title": {
+      "text": "Title Here",
+      "align": "left",
+      "margin": 60,
+      "x": -1,
+      "y": 10
+    },
+    "legend": {
+      "symbolHeight": 12,
+      "symbolWidth": 12,
+      "symbolRadius": 0,
+      "align": "left",
+      "verticalAlign": "left",
+      "x": -7,
+      "y": 24
+    },
+    "xAxis": {
+      "allowDecimals" : false,
+      "categories" : ["January","February","March","April","May","Jun","July","August"]
+    },
+    "yAxis" : {
+        "title" : {
+          "text" : ""
+        }
+    },
+    "tooltip" :  {
+        "pointFormat" :  "{series.name} produced <b>{point.y: ,.0f}</b><br/>warheads in {point.x}"
+    },
+    "plotOptions" :  {
+      "area" :  {
+          "marker" :  {
+            "enabled" :  false,
+            "symbol" :  "circle",
+            "states" :  {
+            "hover" :  {
+                "enabled" :  true
+              }
+            }
+          }
+        }
+    },
+    "series" :  [
+      {
+        "name" :  "Category One",
+        "data" :  [0,28,10,35,7,30,11,35]
+      },
+      {
+        "name" :  "Category Two",
+        "data" :  [0,25,50,12,15,20,42,40]
+      }
+    ]
+  },
+  {
+    "chart": {
+      "type": "pie",
+      "plotBackgroundColor": null,
+      "plotBorderWidth": null,
+      "plotShadow": false,
+      "margin" : [20,0,0,200]
+    },
+    "credits": {
+      "enabled": false
+    },
+    "exporting": {
+      "enabled": false
+    },
+    "legend": {
+      "symbolHeight": 12,
+      "symbolWidth": 12,
+      "symbolRadius": 0,
+      "layout": "vertical",
+      "align": "left",
+      "itemMarginBottom": 20,
+      "verticalAlign": "left",
+      "x": 0,
+      "y": 80
+    },
+    "colors": ["#086b94", "#1e91c1", "#a8e5ff", "#fac705"],
+    "title": {
+      "text": "Title Here",
+      "align": "left",
+      "margin": 100,
+      "x": 5,
+      "y": 10
+
+    },
+    "tooltip": {
+      "pointFormat": "{series.name}: <b>{point.percentage:.1f}%</b>"
+    },
+    "plotOptions": {
+      "pie": {
+        "startAngle": 200,
+        "cursor": "pointer",
+        "dataLabels": {
+          "enabled": false,
+          "sliced":true
+        },
+        "showInLegend": true
+      }
+    },
+    "series": [{
+      "name": "Brands",
+      "colorByPoint": true,
+      "data": [
+        {"name": "38% <br> Category One","y": 38},
+        {"name": "18% <br> Category Two","y": 18},
+        {"name": "28% <br> Category Three","y": 24},
+        {"name": "20% <br> Category Four","y": 20}
+      ]
+    }]
+  },
+  {
+    "chart" :  {
+      "type" :  "column"
+    },
+    "credits": {
+      "enabled": false
+    },
+    "exporting" : {
+      "enabled": false
+    },
+    "colors" : ["#086b94","#a8e5ff"],
+    "title": {
+      "text": "Title Here",
+      "align": "left",
+      "margin": 60,
+      "x": -1,
+      "y": 10
+    },
+    "legend": {
+      "symbolHeight": 12,
+      "symbolWidth": 12,
+      "symbolRadius": 0,
+      "align": "left",
+      "verticalAlign": "left",
+      "x": -7,
+      "y": 24
+    },
+    "xAxis" :  {
+      "categories" :  ["Category One", "Category Two", "Category Three", "Category Four"],
+      "crosshair" :  true
+    },
+    "yAxis" :  {
+      "min" :  0, "title" :  {
+        "text" :  ""
+      }
+    },
+    "tooltip" :  {
+      "shared" :  true,
+      "useHTML" :  true
+    },
+    "plotOptions" :  {
+      "column" :  {
+        "pointPadding" :  0.2, "borderWidth" :  0
+      }
+    },
+    "series" :  [
+      {
+        "name" :  "Category One",
+        "data" :  [45, 40, 49, 38]
+      },
+      {
+        "name" :  "Category Two",
+        "data" :  [32, 28, 38, 22]
+      }
+    ]
+  }
+]

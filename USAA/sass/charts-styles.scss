@@ -1,0 +1,34 @@
+/* Chart-Page Styles*/
+
+@import 'variables';
+
+.graph {
+  padding: 15px;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  border:1px solid $westar;
+  border-radius: 5px;
+}
+.highcharts-container{
+  height: auto;
+  width: 100% !important;
+}
+#area-chart {
+  .highcharts-container{
+    margin-left:-10px;
+  }
+}
+.charts-container{
+  margin-bottom:5px;
+}
+.charts-container {
+  &.side-by-side{
+    margin:0 -10px;
+  }
+}
+.left-sec,.right-sec{
+  float: left;
+  width:50%;
+  padding:15px 10px;
+}

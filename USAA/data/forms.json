@@ -1,0 +1,101 @@
+[
+    {
+        "type": "text", 
+        "name": "text-filed-1",
+        "id": "field1",
+        "label": "Text Field",
+        "placeholder": "Mobile Number",
+        "bottomText": "Optional field.",
+        "value": ""
+    },
+    {
+        "type": "email",
+        "name": "email-field",
+        "id": "field3",
+        "label": "Email Field",
+        "placeholder": "Enter Email",
+        "value": "",
+        "pattern": {},
+        "required": {
+            "message":"This is a required field",
+            "value": true
+        },
+        "valid": {
+            "message":"Something is wrong!",
+            "value": true
+        }
+
+    },
+    {
+        "type": "dropdown",
+        "id": "field4",
+        "name": "Terry",
+        "label": "Dropdown",
+        "value": "",
+        "options": [
+            {
+                "value": "Value 1",
+                "text": "title"
+            },
+            {
+                "value": "Value 2",
+                "text": "title"
+            },
+            {
+                "value": "Value 3",
+                "text": "title"
+            },
+            {
+                "value": "Value 3",
+                "text": "title"
+            }
+        ]
+    },
+    {
+        "type": "file",
+        "id": "field5",
+        "name": "Terry",
+        "label": "File Upload",
+        "value": ""
+    },
+    {
+        "type": "checkbox",
+        "id": "field6",
+        "name": "Terry",
+        "label": "Checkbox",
+        "opt": [
+            {
+                "value": "Answer 1",
+                "selected": true
+            },
+            {
+                "value": "Answer 2",
+                "selected": false
+            }, 
+            {
+                "value": "Answer 3",
+                "selected": false
+            }
+        ]
+    },
+    {
+        "type": "radio",
+        "id": "field7",
+        "name": "Terry",
+        "label": "Radio Buttons",
+        "opt": [
+            {
+                "value": "Answer 1",
+                "elected": true
+            },
+            {
+                "value": "Answer 2",
+                "selected": false
+            },
+            {
+                "value": "Answer 3",
+                "selected": false
+            }
+        ]
+    }
+]

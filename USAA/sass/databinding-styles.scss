@@ -1,0 +1,28 @@
+/* DataBinding Styles*/
+
+@import "variables";
+
+#dataBindings-page {
+    padding-top: 5px;
+	.form-group{
+		h2{
+			&.title{
+				margin:0;
+			}
+		}
+	}
+    input[type=button] {
+        background: $pilorus;
+        color: $white;
+        width: 100px;
+        height: 40px;
+        padding:0;
+        border: none;
+        text-transform: uppercase;
+        border-radius: 	2px;
+        margin:5px 0;
+        &:hover,&:focus{
+			background:$venice-blue;
+        }
+    }
+}

@@ -1,0 +1,334 @@
+/* Forms-Page Styles*/
+/* Descriptive color variables */
+#form-page .form-group {
+  display: inline-block;
+  width: 100%;
+}
+
+#form-page.data-area {
+  padding-top: 5px;
+}
+
+#form-page .page-header-text .title {
+  margin-top: 0;
+}
+
+#form-page .page-header-text .short-desc {
+  padding-bottom: 10px;
+}
+
+.demo-form label {
+  padding: 0;
+  width: 100%;
+  display: block;
+}
+
+.demo-form .control-input {
+  padding: 0;
+}
+
+.demo-form p {
+  display: inline-block;
+  width: 100%;
+}
+
+.demo-form input[type=text], .demo-form input[type=email] {
+  height: 40px;
+  border: 1px solid #e0dedc;
+  margin-bottom: 10px;
+}
+
+.demo-form input[type=text]:focus, .demo-form input[type=email]:focus {
+  box-shadow: none;
+}
+
+.demo-form input {
+  border: 1px solid #e0dedc;
+  box-shadow: none;
+}
+
+.demo-form input:focus {
+  border-color: #66afe9;
+  box-shadow: none;
+}
+
+.form-fields-sec .fields-main-wrapper {
+  margin: 0 -20px;
+}
+
+.form-fields-sec .fields-main-wrapper .fields-column {
+  padding: 0 20px;
+}
+
+.form-fields-sec .fields-main-wrapper .fields-column .fields {
+  padding: 10px 0;
+}
+
+.form-fields-sec .fields-main-wrapper .fields-column label {
+  margin: 0 0 15px 0;
+}
+
+.form-fields-sec .fields-main-wrapper .fields-column .dropdown-field {
+  margin-bottom: 25px;
+}
+
+.fields-column .checkbox {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.checkbox {
+  display: inline-block;
+  width: 100%;
+}
+
+.checkbox input[type=checkbox] {
+  opacity: 0;
+  width: 24px;
+  margin-right: 10px;
+  height: 24px;
+  vertical-align: top;
+}
+
+.checkbox input[type=checkbox] + span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../../images/unchecked-checkbox.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+}
+
+.checkbox input[type=checkbox]:checked + span {
+  background: url("../../images/checked-checkbox.png");
+}
+
+.checkbox input[type=radio] {
+  opacity: 0;
+  width: 24px;
+  margin-right: 10px;
+  height: 24px;
+  vertical-align: top;
+}
+
+.checkbox input[type=radio] + span {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: url("../../images/unchecked-radio.png");
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 0;
+}
+
+.checkbox input[type=radio]:checked + span {
+  background: url("../../images/checked-radio.png");
+}
+
+.has-required > div {
+  vertical-align: top;
+}
+
+.has-required .help-block {
+  color: #66afe9;
+  margin-top: 0;
+}
+
+.has-error {
+  vertical-align: top;
+}
+
+.has-error .help-block {
+  margin-top: 0px;
+}
+
+.glyphicon-exclamation-sign {
+  line-height: 40px;
+  font-size: larger;
+}
+
+.glyphicon-icon-circle:before {
+  content: ".";
+  color: #66afe9;
+  font-size: 100px;
+  line-height: 0;
+  position: relative;
+  top: -24px;
+}
+
+.select-dropdown {
+  border: 1px solid #e0dedc;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 15px;
+}
+
+.select-dropdown .arrow-down span {
+  color: #999;
+  font-weight: normal;
+  font-size: 14px;
+}
+
+.select-dropdown dt a {
+  color: #5b5e64;
+  display: block;
+  font-size: 12px;
+  line-height: 38px;
+  padding-left: 15px;
+  text-decoration: none;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.select-dropdown dt a i {
+  float: right;
+  line-height: 38px;
+  margin-right: 10px;
+  font-size: 16px;
+  color: #a1b1bc;
+}
+
+.select-dropdown dt.choose-options {
+  background: #fafafa;
+}
+
+.select-dropdown dd {
+  position: relative;
+}
+
+.select-dropdown dd ul {
+  border: 1px solid #e0dedc;
+  border-radius: 0;
+  display: none;
+  list-style-type: none;
+  margin: 0px;
+  width: 100%;
+  padding: 0;
+  position: absolute;
+  z-index: 2147483647;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  background: #fff;
+}
+
+.select-dropdown dd ul li {
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  border-bottom: 1px solid #e0dedc;
+}
+
+.select-dropdown dd ul li:last-of-type {
+  border-bottom: none;
+}
+
+.select-dropdown dd ul li a {
+  color: #5b5e64;
+  float: left;
+  font-family: "Montserrat-Light";
+  font-size: 12px;
+  padding: 10px 15px;
+  width: 100%;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+.select-dropdown dd ul li a span {
+  color: #e0dedc;
+}
+
+.upload-field-group .upload-file-field {
+  border: 1px solid #e0dedc;
+  border-radius: 4px;
+  line-height: 38px;
+  margin-bottom: 40px;
+}
+
+.upload-field-group .upload-file-field span {
+  color: #a4b3be;
+  padding: 0 15px;
+  text-transform: capitalize;
+}
+
+.upload-field-group .upload-file-field .file-upload-btn {
+  position: relative;
+  float: right;
+  margin-right: 8px;
+}
+
+.upload-field-group .upload-file-field .file-upload-btn input {
+  opacity: 0;
+  position: relative;
+  z-index: 9;
+  cursor: pointer;
+  max-width: 120px;
+}
+
+.upload-field-group .upload-file-field .file-upload-btn a {
+  position: absolute;
+  right: 0;
+  background: #edecea;
+  border: 1px solid #e0dedc;
+  float: right;
+  display: inline-block;
+  height: 22px;
+  border-radius: 5px;
+  line-height: 22px;
+  color: #777a7d;
+  text-align: center;
+  margin-top: 9px;
+  cursor: pointer;
+  z-index: 1;
+  top: 0;
+  width: 120px;
+}
+
+.upload-field-group .upload-file-field a {
+  text-decoration: none;
+}
+
+.upload-field-group .selected-file {
+  border: 1px solid #e0dedc;
+  border-radius: 4px;
+  line-height: 40px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.upload-field-group .selected-file span {
+  color: #4b5159;
+  padding: 0 15px;
+}
+
+.upload-field-group .selected-file .remove {
+  float: right;
+  margin-right: 10px;
+}
+
+.upload-field-group .selected-file .remove a {
+  height: 16px;
+  width: 16px;
+  display: inline-block;
+  position: relative;
+  line-height: 16px;
+  vertical-align: middle;
+}
+
+.upload-field-group .selected-file .remove a:before {
+  position: absolute;
+  content: 'x';
+  border-radius: 50%;
+  background: #a1b1bc;
+  color: #fff;
+  width: 16px;
+  height: 16px;
+  line-height: 16px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: lighter;
+}
+
+.upload-field-group .selected-file .remove a:hover:before {
+  background: #8b9ca7;
+}

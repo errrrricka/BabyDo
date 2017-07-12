@@ -1,0 +1,10 @@
+.custom-notify-template {
+    text-align: center;
+    border:1px solid rgb(240, 195, 109);
+    background-color: rgb(249, 237, 190);
+    font-size: 13px;
+    font-weight: bold;
+    padding:2px 8px 2px 8px;
+    border-radius: 0;
+    color:#333;
+}

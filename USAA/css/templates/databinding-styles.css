@@ -1,0 +1,25 @@
+/* DataBinding Styles*/
+/* Descriptive color variables */
+#dataBindings-page {
+  padding-top: 5px;
+}
+
+#dataBindings-page .form-group h2.title {
+  margin: 0;
+}
+
+#dataBindings-page input[type=button] {
+  background: #1e91c1;
+  color: #fff;
+  width: 100px;
+  height: 40px;
+  padding: 0;
+  border: none;
+  text-transform: uppercase;
+  border-radius: 2px;
+  margin: 5px 0;
+}
+
+#dataBindings-page input[type=button]:hover, #dataBindings-page input[type=button]:focus {
+  background: #086a94;
+}

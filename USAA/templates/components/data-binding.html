@@ -1,0 +1,31 @@
+<div id="dataBindings-page" class="data-area">
+    <div class="col-sm-12 databinding-content">
+        <form class="demo-form" ng-submit="$ctrl.updateColor(field_value,'sub_menu')" novalidate autocomplete="off">
+            <div class="form-group" ng-class="{ 'has-error' : demoForm.input.$invalid }" ng-repeat="field in $ctrl.form">
+                <h2 class="title">{{field.title}}</h2>
+                <span class="short-desc">{{field.desc}}</span>
+                <ng-form name="demoForm">
+                    <div class="col-md-4 control-input">
+                        <p><input colorpicker="hex" colorpicker-close-on-select colorpicker-parent="true" type="text" class="form-control" ng-model="field[field.colorProp]" ng-change="$ctrl.setColor(field[field.colorProp],field.colorProp)" name="input"></p>
+                    </div>
+                    <span class="control-label instructions">
+                       You've entered {{field[field.colorProp]}}
+                    </span>
+                </ng-form>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error' : demoForm2.input.$invalid }" ng-repeat="form in $ctrl.buttonForm">
+                <h2 class="title">{{form.title}}</h2>
+                <span class="short-desc">{{form.desc}}</span>
+                <ng-form name="demoForm2">
+                    <div class="col-md-4 control-input">
+                        <p><input type="text" class="form-control" ng-model="form[form.linkProp]" name="input"></p>
+                        <span class="control-label instructions">
+                           You've entered {{form[form.linkProp]}}
+                        </span>
+                        <p><input type="button" value="Submit" ng-click="$ctrl.addLink(form[form.linkProp],form.linkProp)"></p>
+                    </div>
+                </ng-form>
+            </div>
+        </form>
+    </div>
+</div>

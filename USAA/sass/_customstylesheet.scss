@@ -1,0 +1,651 @@
+/* Toggle Styles */
+
+html, body {
+    overflow-x: hidden;
+    font-family: Arial;
+    height: 100%;
+}
+
+.primary-color {
+    background: $eastern-blue;
+    color: $eastern-blue;
+}
+
+.secondary-color {
+    background: $venice-blue;
+    color: $venice-blue;
+}
+
+pre.line-numbers {
+    position: relative;
+    padding-left: 3.8em;
+    counter-reset: linenumber;
+
+    > code {
+        position: relative;
+    }
+}
+
+.line-numbers .line-numbers-rows {
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    font-size: 100%;
+    left: -3.8em;
+    width: 3em;
+
+    /* works for line-numbers below 1000 lines */
+    letter-spacing: -1px;
+    border-right: 1px solid $iron;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.line-numbers-rows > span {
+    pointer-events: none;
+    display: block;
+    counter-increment: linenumber;
+
+    &:before {
+        content: counter(linenumber);
+        color: $iron;
+        display: block;
+        padding-right: 0.8em;
+        text-align: right;
+    }
+}
+
+#wrapper {
+    padding-left: 0;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.login-page {
+    background-image: url(../images/Login.jpg);
+    background-size: cover;
+    background-color: $astronaut-blue;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.not-found {
+    background-image: url(../images/background404.jpg);
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.login-page .help-block, .not-found .help-block {
+    text-align: left;
+}
+
+.login-page button {
+    width: 100%;
+    background: $eastern-blue;
+    color: $white;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 0;
+    border: none;
+    border-radius: 3px;
+}
+
+.not-found button {
+    width: 100%;
+    background: $eastern-blue;
+    color: $white;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 8px 0;
+    border: none;
+    border-radius: 3px;
+    background: none;
+    border: solid 2px $eastern-blue;
+    color: $eastern-blue;
+}
+
+.login-page h2 {
+    font-family: Arial;
+    font-size: 24px;
+    color: $trout;
+    margin-bottom: 25px;
+}
+
+.not-found {
+    h2 {
+        font-family: Arial;
+        font-size: 24px;
+        color: $trout;
+        margin-bottom: 25px;
+    }
+
+    .message {
+        color: $masala;
+        text-align: left;
+    }
+}
+
+.login-page .content, .not-found .content {
+    max-width: 560px;
+    box-sizing: border-box;
+    margin: 70px auto 0 auto;
+    display: inline-block;
+    width: 100%;
+    float: none;
+}
+
+.login-page .light-box, .not-found .light-box {
+    background: $white;
+    padding: 0 100px;
+    border-radius: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+.login-page .btn-group, .not-found .btn-group {
+    padding: 25px 15px 100px 15px;
+}
+
+.login-page .content.disclaimer, .not-found .content.disclaimer {
+    margin: 20px 0 0 0;
+    font-size: 12px;
+    color: $white;
+}
+
+.top-logo {
+    background-image: url(../images/usaa-logo-blue.png);
+    background-size: 100% auto;
+    height: 100px;
+    width: 95px;
+    background-repeat: no-repeat;
+    margin: 65px auto 40px auto;
+}
+
+canvas {
+    float: left;
+}
+
+.code {
+    margin: 0;
+    width: 60%;
+    float: right;
+}
+
+.container-fluid {
+    color: $trout;
+}
+
+#wrapper.toggled {
+    padding-left: 222px;
+}
+
+.toolbar {
+    position: absolute;
+    top: 0px;
+    right: 0;
+    padding: 2px 10px 0 10px;
+    font-size: 14px;
+    border-bottom-left-radius: 5px;
+    background: $venice-blue;
+
+    a {
+        color: $white;
+        text-decoration: none;
+        cursor: pointer;
+    }
+}
+
+#sidebar-wrapper {
+    z-index: 1000;
+    position: fixed;
+    left: 222px;
+    width: 0;
+    height: 100%;
+    margin-left: -222px;
+    overflow-y: auto;
+    -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+#wrapper.toggled #sidebar-wrapper {
+    width: 222px;
+}
+
+#page-content-wrapper {
+    width: 100%;
+    position: absolute;
+    padding: 0;
+}
+
+#wrapper.toggled #page-content-wrapper {
+    position: absolute;
+    margin-right: -222px;
+}
+
+/* Top Menu */
+
+.search-box {
+    input, .input-group-addon {
+        border: none;
+        height: 59px;
+        background: none;
+        box-shadow: none;
+        padding: 20px 10px 20px 20px;
+    }
+}
+
+.dataTables_wrapper {
+    padding: 15px;
+}
+
+.search-box input {
+    padding: 0;
+}
+
+.btn-group {
+    width: 100%;
+    padding: 25px 15px;
+}
+
+.tabs-group {
+    button {
+        width: 125px;
+        border-color: $westar;
+
+        &.active, &:hover, &:focus {
+            border-color: $venice-blue !important;
+        }
+    }
+}
+
+.tutorial-title {
+    padding: 0 15px 25px 15px;
+    border-bottom: $quill-gray solid 1px;
+
+    h2 {
+        font-weight: normal;
+        font-size: 24px;
+        background: transparent;
+        line-height: 24px;
+        margin: 30px 0 10px 0;
+    }
+}
+
+@media (min-width: 992px) {
+    .col-md-6 {
+        width: 50%;
+    }
+}
+
+.col-lg-12 {
+    padding: 0;
+}
+
+.glyphicon-search {
+    color: $tundora;
+    font-size: 16px;
+}
+
+.data-area {
+    padding: 50px 15px 50px 15px;
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.short-desc {
+    padding: 10px 0 20px 0;
+    display: block;
+    font-size: 13px;
+}
+
+.data-area .title {
+    margin: 5px 0 0 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.search-box {
+    max-width: 300px;
+    float: left;
+}
+
+.links {
+    float: right;
+}
+
+.content {
+    width: 40%;
+    float: left;
+    padding: 0 20px 0 0;
+
+    .links {
+        float: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+            list-style: none;
+            margin: 0 0 5px 0;
+            font-size: 12px;
+        }
+    }
+}
+
+.step {
+    font-weight: bold;
+    color: $venice-blue;
+}
+
+.content .links li .link-name {
+    margin: 0;
+    line-height: normal;
+    text-decoration: none;
+    height: auto;
+    display: inline-block;
+    font-weight: bold;
+    color: $mine-shaft;
+    background: $silver;
+    padding: 2px 6px 2px 5px;
+    font-size: 13px;
+    border-radius: 5px;
+    font-family: consolas;
+    cursor: pointer;
+}
+
+.line-highlight {
+    transition: opacity 0.5s;
+}
+
+.content .links li {
+    .link-name:hover {
+        background: $venice-blue;
+        color: $white;
+    }
+
+    .link-desc {
+        display: block;
+        padding: 5px 5px;
+        font-size: 13px;
+    }
+}
+
+.links a {
+    &.active {
+        color: $eastern-blue;
+        text-decoration: underline;
+    }
+
+    margin: 0 42px 0 0;
+    line-height: 60px;
+    color: $trout;
+}
+
+.btn-group > .btn {
+    font-size: 13px;
+}
+
+.top-menu {
+    height: auto;
+    border-bottom: $quill-gray solid 1px;
+    background: $alabaster-solid;
+    display: inline-block;
+    width: 100%;
+}
+
+#wrapper.closeMenu {
+    padding-left: 0;
+}
+
+.closeMenu #sidebar-wrapper {
+    width: 0;
+}
+
+.menu {
+    display: inline-block;
+    font-size: 25px;
+    padding: 15px 15px 7px 15px;
+    line-height: 36px;
+    cursor: pointer;
+}
+
+.btn-group > .btn:hover {
+    background: $venice-blue;
+    color: $white;
+}
+
+.btn-default {
+    &:focus {
+        background: $venice-blue;
+        color: $white;
+    }
+
+    &.active {
+        background: $venice-blue;
+        color: $white;
+
+        &:focus, &:hover {
+            background: $venice-blue;
+            color: $white;
+        }
+    }
+}
+
+/* Sidebar Styles */
+
+.sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 222px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    .logo {
+        margin: 50px 0 0 0;
+        display: inline-block;
+
+        img {
+            width: 80px;
+        }
+    }
+
+    .greeting {
+        font-size: 14px;
+        color: $white;
+        line-height: normal;
+        margin: 20px 0 45px 0;
+    }
+
+    li {
+        padding: 0 0 0 50px;
+        line-height: 40px;
+        position: relative;
+        color: rgba(255, 255, 255, 0.8);
+
+        a {
+            display: block;
+            text-decoration: none;
+            font-weight: bold;
+            color: inherit;
+        }
+    }
+}
+
+.form-group {
+    margin: 0;
+    display: inline-block;
+    width: 100%;
+}
+
+.checkbox input {
+    &[type="checkbox"], &[type="radio"] {
+        margin: 0px 5px 0 0;
+        position: relative;
+        top: -1px;
+    }
+}
+
+.error {
+    background: $persian-red;
+    padding: 10px;
+    color: $white;
+    line-height: 14px;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 5px 0 20px 0;
+    display: inline-block;
+}
+
+.sidebar-nav .link {
+    &:hover, &.active {
+        text-decoration: none;
+        color: $white;
+        background: rgba(255, 255, 255, 0.2);
+    }
+}
+
+.instructions {
+    display: inline-block;
+    font-size: 12px;
+    margin: 0;
+    width: 100%;
+    position: relative;
+    top: -7px;
+}
+
+.sidebar-nav .icon {
+    position: absolute;
+    top: 13px;
+    left: 27px;
+    font-size: 13px;
+}
+
+.container {
+    padding: 0;
+}
+
+.sidebar-nav {
+    li a {
+        &:active, &:focus {
+            text-decoration: none;
+        }
+    }
+
+    > .sidebar-brand {
+        font-size: 18px;
+        line-height: normal;
+        text-indent: 0px;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+        font-size: 18px;
+        line-height: normal;
+        text-indent: 0px;
+        text-align: center;
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+
+        a {
+            color: $iron;
+
+            &:hover {
+                color: $white;
+                background: none;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #wrapper {
+        padding-left: 222px;
+
+        &.toggled {
+            padding-left: 0;
+        }
+    }
+
+    #sidebar-wrapper {
+        width: 222px;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        width: 0;
+    }
+
+    #page-content-wrapper {
+        padding: 0;
+        position: relative;
+    }
+
+    #wrapper.toggled #page-content-wrapper {
+        position: relative;
+        margin-right: 0;
+    }
+}
+
+/**
+ * The dnd-list should always have a min-height,
+ * otherwise you can't drop to it once it's empty
+ */
+
+ul[dnd-list] {
+    min-height: 42px;
+    padding-left: 0px;
+
+    .dndDraggingSource {
+        display: none;
+    }
+
+    .dndPlaceholder {
+        background-color: $alto;
+        display: block;
+        min-height: 42px;
+    }
+
+    li {
+        background-color: $white;
+        border: 1px solid $alto;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        display: block;
+        padding: 10px 15px;
+        margin-bottom: -1px;
+
+        &.selected {
+            background-color: $greenish-white;
+            color: $killarney;
+        }
+    }
+}
+
+/**
+ * The dndDraggingSource class will be applied to
+ * the source element of a drag operation. It makes
+ * sense to hide it to give the user the feeling
+ * that he's actually moving it.
+ */
+
+/**
+ * An element with .dndPlaceholder class will be
+ * added to the dnd-list while the user is dragging
+ * over it.
+ */
+
+/**
+ * Show selected elements in green
+ */

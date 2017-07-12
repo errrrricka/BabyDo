@@ -1,0 +1,15 @@
+<div class="not-found">
+    <div class="content">
+        <div class="light-box">
+            <div class="top-logo"></div>
+            <h2>{{$ctrl.title}}</h2>
+                <div class="content-area">
+                    <span class="message">{{$ctrl.disclaimer}}</span>
+                </div>
+            <div class="btn-group">
+                <button ng-repeat="button in $ctrl.buttons" ng-link="['{{button.name}}']" type="button" class="btn btn-default btn-filter" data-target="{{button.text}}">{{button.text}}</button>
+            </div>
+        </div>
+        <span class="content disclaimer">© 2016 USAA Legal Information</span>
+    </div>
+</div>

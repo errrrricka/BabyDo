@@ -1,0 +1,114 @@
+<div id="form-page" class="data-area">
+    <div class="page-header-text">
+        <div class="col-sm-12">
+            <h2 class="title">{{$ctrl.title}}</h2>
+            <span class="short-desc">{{$ctrl.desc}}</span>
+        </div> 
+    </div>
+    <div class="form-fields-sec" ng-controller="$ctrl.demo as demo">   
+        <div class="col-sm-12">
+            <form class="demo-form" novalidate>
+                <div class="fields-main-wrapper">
+                    <div class="col-sm-4 fields-column">
+                        <div ng-repeat="field in demo.form" ng-switch="field.type">
+                            <ng-form name="demoForm">
+                                <div ng-if="field.type == 'text' || field.type == 'email'">
+                                    <div class="fields" ng-class="{ 'has-required' : demoForm.input.$error.required}">
+                                        <label for="{{field.id}}" class="control-label">{{field.label}}</label>
+                                        <div ng-switch-when="text" class="control-input">
+                                            <input id="{{field.id}}" type="{{field.type}}" class="form-control" ng-model="field.value"
+                                                   ng-required="{{field.required.value}}" ng-minlength="{{field.minlength.value}}" ng-maxlength="{{field.pattern.value}}"
+                                                   ng-pattern="{{field.pattern.value}}" placeholder="{{field.placeholder}}" name="input">
+                                            <p>{{ field.bottomText }}</p>
+                                        </div>
+                                        <div ng-switch-when="email" class="form-group has-feedback" ng-class="{'has-error' : demoForm.input.$error.email}">
+                                            <input id="{{field.id}}" type="{{field.type}}" class="form-control" ng-model="field.value" ng-required="{{field.required.value}}"
+                                                   ng-minlength="{{field.minlength.value}}" ng-maxlength="{{field.pattern.value}}"
+                                                   ng-pattern="{{field.pattern.value}}" placeholder="{{field.placeholder}}"  name="input">
+                                            <span ng-show="demoForm.input.$error.email" class="glyphicon glyphicon-exclamation-sign form-control-feedback"></span>
+                                            <span ng-show="demoForm.input.$error.required" class="glyphicon glyphicon-icon-circle form-control-feedback"></span>
+                                        </div>
+                                        <div ng-class="{'has-error' : demoForm.input.$error.email}">
+                                            <p class="help-block" ng-show="demoForm.input.$error.email">{{field.valid.message}}</p>
+                                            <p class="help-block" ng-show="demoForm.input.$error.required">{{field.required.message}}</p>
+                                            <p class="help-block" ng-show="demoForm.input.$error.pattern">{{field.pattern.message}}</p>
+                                            <p class="help-block" ng-show="demoForm.input.$error.maxlength">{{field.maxlength.message}}</p>
+                                            <p class="help-block" ng-show="demoForm.input.$error.minlength">{{field.minlength.message}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-form>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 fields-column">
+                        <div ng-repeat="field in demo.form" ng-switch="field.type" >
+                            <ng-form name="demoForm">
+                                <div ng-if="field.type == 'dropdown' || field.type == 'file'">
+                                    <div class="fields dropdown-field" ng-class="{ 'has-required' : demoForm.input.$error.required }">
+                                        <label for="{{field.id}}" class="control-label">{{field.label}}</label>
+                                        <div ng-switch-when="dropdown" class="control-input">
+                                            <dl class="select-dropdown" id="{{field.id}}">
+                                                <dt>
+                                                    <a class="arrow-down" href="javascript:void(0)"><span>Select an option</span> <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+                                                </dt>
+                                                <dd>
+                                                    <ul><li ng-repeat="opt in field.options"><a href="javascript:void(0)">{{opt.text}}<span class="value"></span></a></li></ul>
+                                                </dd>
+                                            </dl>
+
+                                        </div>
+                                        <div ng-switch-when="file" class="control-input">
+                                            <div class="upload-field-group">
+                                                <div class="upload-file-field">
+                                                    <span>No File Selected</span>
+                                                    <div class="file-upload-btn">
+                                                        <input type="file">
+                                                        <a type="btn">Choose File</a>
+                                                    </div>
+                                                </div>
+                                                <div class="selected-file">
+                                                    <span>file.png</span>
+                                                    <div class="remove"><a href=""></a></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div ng-show="demoForm.input.$touched">
+                                            <p class="help-block" ng-show="demoForm.input.$error.required">{{field.required.message}}</p>
+                                            <p class="help-block" ng-show="demoForm.input.$error.pattern">{{field.pattern.message}}</p>
+                                            <p class="help-block" ng-show="demoForm.input.$error.maxlength">{{field.maxlength.message}}</p>
+                                            <p class="help-block" ng-show="demoForm.input.$error.minlength">{{field.minlength.message}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-form>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 fields-column">
+                        <div ng-repeat="field in demo.form" ng-switch="field.type" >
+                            <ng-form name="demoForm">
+                                <div ng-if="field.type == 'checkbox' || field.type == 'radio'">
+                                    <div class="fields" ng-class="{ 'has-error' : demoForm.input.$invalid }">
+                                        <label for="{{field.id}}" class="control-label">{{field.label}}</label>
+                                        <div ng-switch-when="checkbox" class="control-input" ng-required="{{field.required.value}}">
+                                            <div ng-repeat="option in field.opt" class="checkbox"><label><input type="checkbox" id="{{option.value}}" value="" ng-checked="{{option.selected}}">{{option.value}} <span></span></label></div>
+                                        </div>
+                                        <div ng-switch-when="radio" class="control-input" ng-required="{{field.required.value}}">
+                                            <div ng-repeat="option in field.opt" class="checkbox radio"><label><input type="radio" id="{{option.value}}" value="" name="{{field.id}}" ng-checked="{{option.selected}}">{{option.value}} <span></span></label></div>
+                                        </div>
+                                        <div ng-show="demoForm.input.$touched">
+                                            <p class="help-block" ng-show="demoForm.input.$error.required">{{field.required.message}}</p>
+                                            <p class="help-block" ng-show="demoForm.input.$error.pattern">{{field.pattern.message}}</p>
+                                            <p class="help-block" ng-show="demoForm.input.$error.maxlength">{{field.maxlength.message}}</p>
+                                            <p class="help-block" ng-show="demoForm.input.$error.minlength">{{field.minlength.message}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </ng-form>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </div>
+</div>

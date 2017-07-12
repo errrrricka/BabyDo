@@ -1,0 +1,14 @@
+/* DataMaps-Page Styles*/
+
+@import 'variables';
+
+#data-maps-page #data-map {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  border:1px solid $eastern-blue;
+}
+
+#data-maps-page #data-map svg{
+  height:500px;
+}

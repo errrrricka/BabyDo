@@ -1,0 +1,11 @@
+/* Notifications-Page Styles*/
+/* Descriptive color variables */
+#notify-page .custom-notify-template {
+  text-align: center;
+  border: 1px solid #F0C36D;
+  background-color: #F9EDBE;
+  font-size: 13px;
+  font-weight: bold;
+  padding: 2px 8px 2px 8px;
+  border-radius: 0;
+  color: #333; }

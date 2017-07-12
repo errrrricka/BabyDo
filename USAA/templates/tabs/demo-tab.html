@@ -1,0 +1,7 @@
+<div class="data-area" ng-repeat="link in $ctrl.data">
+    <h2 class="title">{{link.title}}</h2>
+    <span class="short-desc">{{link.desc}}</span>
+    <div class="code">
+        <pre class="line-numbers" data-src="{{link.code.src}}" data-line="{{link.code.lines}}"></pre>
+    </div>
+</div>

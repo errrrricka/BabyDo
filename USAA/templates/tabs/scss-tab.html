@@ -1,0 +1,16 @@
+<div class="data-area" ng-repeat="page in $ctrl.data">
+    <div class="content">
+        <div class="step">Step {{$index + 1}}</div>
+        <h2 class="title">{{page.title}}</h2>
+        <span class="short-desc">{{page.desc}}</span>
+        <ul class="links">
+            <li ng-repeat="link in page.code.links" class="">
+                <span ng-mouseenter="$ctrl.highlight(link.highlight,$event)" ng-mouseleave="$ctrl.unhighlight($event)" href="{{link.url}}" class="link-name">{{link.name}}</span>
+                <span class="link-desc">{{link.desc}}</span>
+            </li>
+        </ul>
+    </div>
+    <div class="code">
+        <pre id="{{page.code.id}}" class="line-numbers" data-src="{{page.code.src}}" data-line="{{page.code.lines}}"></pre>
+    </div>
+</div>

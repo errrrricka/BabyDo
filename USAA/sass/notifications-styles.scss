@@ -1,0 +1,16 @@
+/* Notifications-Page Styles*/
+
+@import 'variables';
+
+#notify-page {
+  .custom-notify-template {
+    text-align: center;
+    border:1px solid  $rob-roy;
+    background-color: $dairy-cream;
+    font-size: 13px;
+    font-weight: bold;
+    padding:2px 8px 2px 8px;
+    border-radius: 0;
+    color:#333;
+  }
+}
